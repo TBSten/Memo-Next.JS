@@ -1,0 +1,57 @@
+@use "util" ;
+
+.memo{
+    box-sizing: border-box;
+    border:solid black 3px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: 300px;
+
+    div{
+        border-bottom: solid 1px black;
+        font-size: 30px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        input{
+            text-align: center;
+            box-sizing: border-box;
+            width:100%;
+            font-size: inherit;
+            outline: none;
+            border: none;
+            background: none;
+        }
+        button{
+            box-sizing: border-box;
+            font-size: inherit;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                &:hover{
+                background-color: rgb(245, 245, 245);
+            }
+            &:active{
+                border: solid 1px blue;
+            }
+    
+        }
+
+    }
+    textarea{
+        box-sizing: border-box;
+        width:100%;
+        outline: none;
+        border: none;
+        background: none;
+        resize:none;
+    }
+}
+
