@@ -1,6 +1,10 @@
+import {getMemos} from "lib/db" ;
+
 
 module.exports = (req, res) => {
     const { name = 'World' } = req.query;
-    res.send(`Hello ${name}!`);
+    const result = {"msg":`Hello ${name}!`} ;
+    result.memos = getMemos();
+    res.send(result);
 };
 
